@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> 연봉을 입력해보세요</h1>
+  <input id="input" type="text">
+  <button>확인</button>
+  <p>당신은 1초에 얼마를 벌고 있을까요?</p>
+  
+  <script>
+      const $input = document.getElementById('input')
+      const start = document.querySelector('button')
+      const $p = document.querySelector('p')
+
+      let timer;
+
+      function interval(){
+        clearInterval(timer);
+
+        value = input.value * 10000
+        secValue = value / 365 / 24 / 60/60
+        minuteValue = value / 365/ 24/60
+
+        let secNum = 0;
+        timer = setInterval(()=>{
+          $p.innerHTML = 
+          `당신은 ${secNum++}초에 ${secValue * secNum}원을 벌고 있습니다.`
+        },1000)
+      }
+
+      start.addEventListener('click',()=>{
+        interval();
+        gfgfd
+      })
+  </script>
+</body>
+</html>
